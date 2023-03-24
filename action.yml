@@ -1,0 +1,27 @@
+name: 'FTP File Upload'
+description: 'Upload a file to FTP.'
+author: 'TomasBkk'
+inputs:
+  user:
+    description: 'FTP User'
+    required: true
+  password:
+    description: 'FTP Password'
+    required: true
+  host:
+    description: 'FTP Hostname'
+    required: true
+  port:
+    description: 'FTP Hostname'
+    required: false
+    default: '21'
+  src: 
+    description: 'Path to file to upload'
+    required: true
+  dest: 
+    description: 'Destination file path on remote FTP'
+    required: true
+runs:
+  using: 'node16'
+  main: 'index.js'
+

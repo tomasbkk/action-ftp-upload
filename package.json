@@ -1,0 +1,13 @@
+{
+  "name": "action-ftp-file-upload",
+  "version": "1.0.0",
+  "author": "TomasBkk",
+  "description": "GitHub Action that uploads a file using FTP",
+  "license": "MIT",
+  "private": true,
+  "main": "index.js",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "basic-ftp": "^5.0.2"
+  }
+}
