@@ -1,6 +1,9 @@
 name: 'FTP File Upload'
 description: 'Upload a file to FTP.'
 author: 'TomasBkk'
+branding:
+  icon: arrow-up-circle
+  color: green
 inputs:
   user:
     description: 'FTP User'
