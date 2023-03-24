@@ -32,6 +32,10 @@ This action performs a single file transfer using FTP.
 
 **Optional** The FTP port of the server. (Default: `21`)
 
+### `secure`
+
+**Optional** (boolean | "implicit") Explicit FTPS over TLS, default: false. Use "implicit" if you need support for legacy implicit FTPS.
+
 ### `src`
 
 **Required** The path to the file to upload.
