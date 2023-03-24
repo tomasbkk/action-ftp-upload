@@ -4,14 +4,14 @@ This action performs a single file transfer using FTP.
 
 ## Usage
 ```yml
-- name: Upload bundle
+- name: Upload file
   uses: tomasbkk/action-ftp-file-upload@v1.0
   with:
     user: ${{ secrets.FTP_USER }}
     password: ${{ secrets.FTP_PASSWORD }}
     host: ${{ secrets.FTP_HOST }}
-    src: dist/bundle.zip
-    dest: archive/app/releaseBundle.zip
+    src: dist/file.zip
+    dest: archive/app/file.zip
 ```
 
 ## Inputs
@@ -32,10 +32,6 @@ This action performs a single file transfer using FTP.
 
 **Optional** The FTP port of the server. (Default: `21`)
 
-### `secure`
-
-**Optional** (boolean | "implicit") Explicit FTPS over TLS, default: false. Use "implicit" if you need support for legacy implicit FTPS.
-
 ### `src`
 
 **Required** The path to the file to upload.
@@ -43,6 +39,14 @@ This action performs a single file transfer using FTP.
 ### `dest`
 
 **Required** Destination file path on FTP remote server. (can change file name)
+
+### `secure`
+
+**Optional** (boolean | "implicit") Explicit FTPS over TLS, default: false. Use "implicit" if you need support for legacy implicit FTPS.
+
+### `verbose`
+
+**Optional** Default is false. If true verbose logging is used to debug the ftp connection and upload.
 
 ## Copyright and License
 © 2023 TomasBkk under the [MIT license](LICENSE.md).

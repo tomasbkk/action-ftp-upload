@@ -10,10 +10,10 @@ async function main() {
         const secure = core.getInput('secure') || false
         const src = core.getInput('src')
         const dest = core.getInput('dest') || './'
-        console.log('Connecting to ', host, ':', port)
+        const verbose = core.getInput('verbose') || false
         
         const client = new ftp.Client()
-        client.ftp.verbose = true
+        client.ftp.verbose = verbose
 
         await client.access({
             host: host,
@@ -22,7 +22,7 @@ async function main() {
             password: password,
             secure: secure
         })
-        console.log(await client.list())
+
         await client.uploadFrom(src, dest)
 
         client.close()
