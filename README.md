@@ -1,4 +1,4 @@
-# GitHub Action Simple File Transfer
+# GitHub Action FTP File Transfer
 
 This action performs a single file transfer using FTP.
 
