@@ -24,6 +24,9 @@ inputs:
   dest: 
     description: 'Destination file path on remote FTP'
     required: true
+  secure: 
+    description: '(boolean | "implicit") Explicit FTPS over TLS, default: false. Use "implicit" if you need support for legacy implicit FTPS.'
+    required: false
 runs:
   using: 'node16'
   main: 'index.js'
