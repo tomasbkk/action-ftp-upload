@@ -14,6 +14,7 @@ async function main() {
         
         const client = new ftp.Client()
         client.ftp.verbose = verbose
+        client..ftp.log = core.debug;
 
         await client.access({
             host: host,
