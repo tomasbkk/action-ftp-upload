@@ -5,7 +5,7 @@ This action performs a single file transfer using FTP.
 ## Usage
 ```yml
 - name: Upload file
-  uses: tomasbkk/action-ftp-file-upload@v1.0
+  uses: tomasbkk/action-ftp-upload@v1.0
   with:
     user: ${{ secrets.FTP_USER }}
     password: ${{ secrets.FTP_PASSWORD }}
