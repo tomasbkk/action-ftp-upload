@@ -44,6 +44,11 @@ This action performs a single file transfer using FTP.
 
 **Optional** (boolean | "implicit") Explicit FTPS over TLS, default: false. Use "implicit" if you need support for legacy implicit FTPS.
 
+
+### `rejectUnauthorized`
+
+**Optional** Whether to allow unauthorized servers when using `secure` mode. default:true. Set to false when using self-signed certificates
+
 ### `verbose`
 
 **Optional** Default is false. If true verbose logging is used to debug the ftp connection and upload.

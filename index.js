@@ -12,6 +12,8 @@ async function main() {
           secure = secure === 'true'
         }
 
+        const rejectUnauthorized = core.getInput('rejectUnauthorized') === 'true'
+
         const src = core.getInput('src')
         const dest = core.getInput('dest') || './'
         const verbose = core.getInput('verbose') || false
@@ -25,7 +27,8 @@ async function main() {
             port: port,
             user: user,
             password: password,
-            secure: secure
+            secure: secure,
+            secureOptions: { rejectUnauthorized: rejectUnauthorized },
         })
 
         await client.uploadFrom(src, dest)
