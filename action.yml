@@ -35,6 +35,6 @@ inputs:
     description: 'Default is false. If true verbose logging is used to debug the ftp connection and upload.'
     required: false
 runs:
-  using: 'node16'
+  using: 'node24'
   main: 'index.js'
 
